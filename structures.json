@@ -1,0 +1,93 @@
+{
+    frameRate: 24,
+    bounds: {
+        minX: 1,
+        minY: 1,
+        maxX: 2,
+        maxY: 2
+    }
+}
+
+{
+    characterId: 1,
+    type: SHAPE,
+    bounds: {
+        minX...
+    },
+    commands: [
+        {
+            type: STRAIGHT,
+            to: {
+                x: 20.0,
+                y: 20.0
+            }
+        },
+        {
+            type: CURVED,
+            control: {
+                x: 15.0,
+                y: 15.0
+            },
+            anchor: {
+                x: 30.0,
+                y: 30.0
+            }
+        },
+        {
+            type: MOVE,
+            to: {
+                x: 40.0,
+                y: 40.0
+            }
+        }
+    ]
+}
+
+{
+    characterId: 2,
+    type: SPRITE,
+    frames: {
+        0: [
+            {
+                type: ADD,
+                depth: 0,
+                character: 1,
+                matrix: [1, 0, 0, 1, 20.4, -18.2]
+            },
+            {
+                type: MODIFY,
+                depth: 0,
+                matrix: [1, 0, 0, 1, 10.8, 30.4]
+            },
+            {
+                type: REPLACE,
+                depth: 0,
+                character: 2,
+                matrix: [1, 0, 0, 1, -0.2, -3.4]
+            },
+            {
+                type: REMOVE,
+                depth: 0
+            },
+            {
+                type: RATIO,
+                depth: 0,
+                ratio: 32456
+            }
+        ]
+    }
+}
+
+{
+    characterId: 3,
+    type: MORPH,
+    start: {
+        bounds: {x: 1, y: 1},
+        commands: [
+            
+        ]
+    },
+    end: {
+        ...
+    }
+}
